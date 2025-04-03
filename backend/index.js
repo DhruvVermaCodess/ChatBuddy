@@ -11,7 +11,7 @@ const SECRET_KEY = "your_secret_key";
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:5173', // Replace with your frontend URL
+    origin: 'https://chattbuddy.vercel.app', // Replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }))
