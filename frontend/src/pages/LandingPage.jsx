@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 
 const LandingPage = () => {
-  const {isAuthenticated} = useContext(AuthContext)
+  const { isAuthenticated } = useContext(AuthContext);
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0 },
@@ -69,14 +69,24 @@ const LandingPage = () => {
                 ChatBuddy
               </motion.span>
             </div>
-            <div className={`flex items-center space-x-4 ${isAuthenticated ? 'hidden' : 'block'}`}>
+            <div
+              className={`flex items-center space-x-4 ${
+                isAuthenticated ? "hidden" : "block"
+              }`}
+            >
+              <Link
+                to="/about"
+                className="text-gray-300 hover:text-white px-4 py-2 transition"
+              >
+                About
+              </Link>
               <motion.button
                 className="px-4 py-2 rounded-md text-gray-300 hover:text-white transition"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Link to="/login" className="text-gray-300 hover:text-white">
-                    Log In
+                  Log In
                 </Link>
               </motion.button>
               <motion.button
@@ -85,7 +95,7 @@ const LandingPage = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link to="/signup" className="text-black hover:text-gray-800">
-                    Sign Up
+                  Sign Up
                 </Link>
               </motion.button>
             </div>
@@ -118,9 +128,9 @@ const LandingPage = () => {
               whileTap={{ scale: 0.95 }}
               variants={slideUp}
             >
-                <Link to="/chatbot" className="text-black hover:text-gray-800">
-                    Get Started For Free
-                </Link>
+              <Link to="/chatbot" className="text-black hover:text-gray-800">
+                Get Started For Free
+              </Link>
             </motion.button>
           </motion.div>
           <motion.div

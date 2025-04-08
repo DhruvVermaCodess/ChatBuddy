@@ -4,12 +4,14 @@ import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
 import ChatBotHomePage from './pages/ChatBotHomePage'
 import LandingPage from './pages/LandingPage'
+import AboutPage from './pages/AboutPage'
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/chatbot" element={<ChatBotHomePage />} />
